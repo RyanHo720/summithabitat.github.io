@@ -1,12 +1,25 @@
-<!DOCTYPE html>
+<html>
+<title>SummitHabitat's Website</title>
 <head>
-    <meta charset="UTF-8">
-    <META HTTP-EQUIV="refresh" CONTENT="3;URL=htpps://blog.fjordnet.work">
-    <title>Page Redirection</title>
+<script type="text/javascript">
+var ss = 3;
+function countdown() {
+ss = ss-1;
+if (ss<0) {
+window.location="https://blog.summithabit.at";
+}
+else {
+document.getElementById("countdown").innerHTML=ss;
+window.setTimeout("countdown()", 1000);
+}
+}
+</script>
 </head>
-<body>
-<p>Hey there! Our website isn't ready yet! You will be redirected to our blog in a few seconds.
-<br>
-<p>If you are not redirected, click this <a href="https://blog.summithabit.at">link</a>.</p>
+<body onload="countdown()">
+<center>
+<h2>Our website isn't ready yet! Meanwhile, check out our blog!</h2>
+<h3>Redirecting to <a href="https://blog.summithabit.at">https://blog.summithabit.at</a>... (<span id="countdown" style="color:green;">10</span>)</h3>
+<h3>Click the link if it's not redirecting!</h3>
+</center>
 </body>
 </html>
